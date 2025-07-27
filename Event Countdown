@@ -1,0 +1,24 @@
+import datetime, time
+
+print("Event Countdown!")
+print()
+
+today = datetime.date.today()
+
+name = input("Name of event\n> ")
+year = int(input("What Year\n> "))
+month = int(input("What Month\n> "))
+day = int(input("What day\n> "))
+time.sleep(1)
+print()
+event = datetime.date(year, month, day)
+
+difference = event - today
+difference = difference.days
+
+if event > today:
+  print(f"{name} coming in {difference} days!")
+elif event < today:
+  print(f"{name} was {difference} day(s) ago!")
+else:
+  print(f"{name} today!🥳🥳🥳")
